@@ -108,7 +108,7 @@ namespace 写真館システム
             Header_Menu.Width = this.Width - marginWidth;
             Header_Menu.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left;
             
-
+            /*
             Main_menu = new Main_menu();
             MainPanel.Controls.Add(Main_menu);
             Main_menu.pageName = "メインメニュー";
@@ -132,7 +132,7 @@ namespace 写真館システム
             Reservation_timetable.Height = this.Height - marginHeight;
             Reservation_timetable.Width = this.Width - marginWidth;
             Reservation_timetable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left;
-            
+            */
             Photo_selection = new Photo_selection();
             MainPanel.Controls.Add(Photo_selection);
             Photo_selection.pageName = "写真選択";
@@ -148,7 +148,7 @@ namespace 写真館システム
             Reception_search.Height = this.Height - marginHeight;
             Reception_search.Width = this.Width - marginWidth;
             Reception_search.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left;
-
+            /*
             Reception_details = new Reception_details();
             MainPanel.Controls.Add(Reception_details);
             Reception_details.pageName = "受付詳細";
@@ -268,23 +268,27 @@ namespace 写真館システム
             Customer_information.Height = this.Height - marginHeight;
             Customer_information.Width = this.Width - marginWidth;
             Customer_information.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left; Login = new Login();
+           
+             */
             /*
-                        Order_entry = new Order_entry();
-                        MainPanel.Controls.Add(Order_entry);
-                        Order_entry.pageName = "発注入力";
-                        Order_entry.Visible = false;
-                        Order_entry.Height = this.Height - marginHeight;
-                        Order_entry.Width = this.Width - marginWidth;
-                        Order_entry.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left; Login = new Login();
-            */
- /*           rental = new rental();
-            MainPanel.Controls.Add(rental);
-            rental.pageName = "一括貸出";
-            rental.Visible = false;
-            rental.Height = this.Height - marginHeight;
-            rental.Width = this.Width - marginWidth;
-            rental.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left; Login = new Login();
-*/
+                       Order_entry = new Order_entry();
+                       MainPanel.Controls.Add(Order_entry);
+                       Order_entry.pageName = "発注入力";
+                       Order_entry.Visible = false;
+                       Order_entry.Height = this.Height - marginHeight;
+                       Order_entry.Width = this.Width - marginWidth;
+                       Order_entry.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left; Login = new Login();
+           */
+            /*           rental = new rental();
+                       MainPanel.Controls.Add(rental);
+                       rental.pageName = "一括貸出";
+                       rental.Visible = false;
+                       rental.Height = this.Height - marginHeight;
+                       rental.Width = this.Width - marginWidth;
+                       rental.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right | AnchorStyles.Left; Login = new Login();
+           */
+
+            Login = new Login();
             MainPanel.Controls.Add(Login);
             Login.pageName = "ログイン";
             Login.Visible = false;

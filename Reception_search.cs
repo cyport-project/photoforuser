@@ -48,7 +48,6 @@ namespace 写真館システム
             // DataGridView初期化（データクリア）
             dataGridView1.Rows.Clear();
 
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -432,11 +431,21 @@ namespace 写真館システム
             
         }
 
-        //セルをダブルクリックしたら、受付明細へ遷移する。
+        //セルをダブルクリックしたら、写真選択へ遷移する。
         private void dataGridView1_CellDoubleClicl(object sender, DataGridViewCellMouseEventArgs e)
         {
-            MainForm.sendPage(this, MainForm.Photo_selection);
-            MainForm.Photo_selection.PageRefresh();
+            List<string> photoDirList = DB.t_shooting_data.getPhotoDir(MainForm.session_t_reception.reception_code);
+            if(photoDirList.Count > 0)
+            {
+                MainForm.sendPage(this, MainForm.Photo_selection);
+                MainForm.Photo_selection.PageRefresh();
+            }
+            else
+            {
+                MessageBox.Show("予約登録がされていないために、写真が取得できません\n 予約登録を済ませてください。");
+                return;
+            }
+
         }
 
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
